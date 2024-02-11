@@ -27,6 +27,14 @@ Trace-2: A->[B,C]
 
 `cross-referenced-traces.handlebars` has three traces with the first trace having references to trace2 and trace3
 
+### Variable format
+```
+t1.traceId -> traceId of firt trace
+t1.s1 -> First spanId of first trace
+t1.st1 -> startTime of first spanId of first trace
+```
+
+
 ## TODO
 // Currently the tests only demonstrate constructing a Model.Batch from the handlebars template.
 1. Hookup with apache JMeter or similar to generate based on JMeter load requirements
