@@ -1,0 +1,136 @@
+{
+  "spans": [
+    {
+      "traceId": "{{t1.traceId}}",
+      "spanId": "{{t1.s1}}",
+      "operationName": "operation-a",
+      "references": [],
+      "startTime": "{{t1.st1}}",
+      "duration": "0.100s",
+      "tags": [
+        {
+          "key": "key-1",
+          "vStr": "val-1"
+        }
+      ],
+      "processId": "service-a",
+      "process": {
+        "serviceName": "service-a"
+      }
+    },
+    {
+      "traceId": "{{t1.traceId}}",
+      "spanId": "{{t1.s2}}",
+      "operationName": "operation-b",
+      "references": [
+        {
+          "traceId": "{{t1.traceId}}",
+          "spanId": "{{t1.s1}}",
+          "refType": "FOLLOWS_FROM"
+        }
+      ],
+      "startTime": "{{t1.st2}}",
+      "duration": "0.100s",
+      "tags": [
+        {
+          "key": "key-1",
+          "vStr": "val-1"
+        }
+      ],
+      "processId": "service-a",
+      "process": {
+        "serviceName": "service-a"
+      }
+    },
+    {
+      "traceId": "{{t1.traceId}}",
+      "spanId": "{{t1.s3}}",
+      "operationName": "operation-c",
+      "references": [
+        {
+          "traceId": "{{t1.traceId}}",
+          "spanId": "{{t1.s2}}",
+          "refType": "FOLLOWS_FROM"
+        }
+      ],
+      "startTime": "{{t1.st3}}",
+      "duration": "0.100s",
+      "tags": [
+        {
+          "key": "key-1",
+          "vStr": "val-1"
+        }
+      ],
+      "processId": "service-a",
+      "process": {
+        "serviceName": "service-a"
+      }
+    },
+    {
+      "traceId": "{{t2.traceId}}",
+      "spanId": "{{t2.s1}}",
+      "operationName": "operation-a",
+      "references": [],
+      "startTime": "{{t2.st1}}",
+      "duration": "0.100s",
+      "tags": [
+        {
+          "key": "key-1",
+          "vStr": "val-1"
+        }
+      ],
+      "processId": "service-a",
+      "process": {
+        "serviceName": "service-a"
+      }
+    },
+    {
+      "traceId": "{{t2.traceId}}",
+      "spanId": "{{t2.s2}}",
+      "operationName": "operation-b",
+      "references": [
+        {
+          "traceId": "{{t2.traceId}}",
+          "spanId": "{{t2.s1}}",
+          "refType": "FOLLOWS_FROM"
+        }
+      ],
+      "startTime": "{{t2.st2}}",
+      "duration": "0.100s",
+      "tags": [
+        {
+          "key": "key-1",
+          "vStr": "val-1"
+        }
+      ],
+      "processId": "service-b",
+      "process": {
+        "serviceName": "service-b"
+      }
+    },
+    {
+      "traceId": "{{t2.traceId}}",
+      "spanId": "{{t2.s3}}",
+      "operationName": "operation-c",
+      "references": [
+        {
+          "traceId": "{{t2.traceId}}",
+          "spanId": "{{t2.s1}}",
+          "refType": "FOLLOWS_FROM"
+        }
+      ],
+      "startTime": "{{t2.st3}}",
+      "duration": "0.100s",
+      "tags": [
+        {
+          "key": "key-1",
+          "vStr": "val-1"
+        }
+      ],
+      "processId": "service-c",
+      "process": {
+        "serviceName": "service-c"
+      }
+    }
+  ]
+}
